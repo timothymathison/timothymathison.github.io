@@ -1,0 +1,121 @@
+body
+{width: 900px;
+margin-left:auto;
+margin-right:auto;
+background-color:#001A00;
+color:#A37547;
+font-family: "arial";}
+
+a 
+{color: #C2D6D6;}
+
+a:hover
+{color: #ff0000;}
+
+.menu a
+{text-decoration: none;}
+
+header
+{text-align:center;}
+
+h1
+{font-size: 2em}
+
+.title
+{margin-bottom: 1em;
+margin-left:auto;
+margin-right:auto;
+width: 80%;
+font-size:4em;
+font-family: 'Dawning of a New Day', cursive;}
+
+.menu
+{margin-left:auto;
+margin-right:auto;
+min-width:100%;
+margin-bottom:2em;}
+
+.menu div
+{display: inline-block;
+padding-top:0.25em;
+padding-bottom:0.25em;
+border-right-style: solid;
+border-width: 5px;
+border-color:#3D1F00;
+text-align: center;
+font-size:2em;
+width: 19%;
+background-color: #663300;}
+
+div.noborder
+{border-width: 0;}
+
+.title<
+{display:inline;}
+
+#target
+{float:right;
+width:150px;
+height:143px;}
+
+#bow
+{float:left;
+width:150px;
+height:143px;}
+
+#p_w_b
+{width: 816px;
+height: 612px;
+display: block;
+margin-left: auto;
+margin-right: auto;}
+
+#m_a
+{float: left;
+margin-right:0.5em;}
+
+#r_b
+{width: 320px;
+height: 240px;
+float: left;
+margin-right:0.5em;}
+
+#c_b
+{width: 242px;
+height: 150px;
+float: right;
+margin-left:0.5em;}
+
+#l_b
+{width: 300px;
+height: 300px;
+float: left;
+margin-right:0.5em;}
+
+#com_b
+{width: 256px;
+height: 192px;
+float: right;
+margin-left: 0.5em;}
+
+#tech
+{width: 435px;
+height: 300px;
+float: left;
+margin-right: 0.5em;
+margin-top: 0.5em;}
+
+#comp
+{width: 435px;
+height: 300px;
+float: right;}
+
+table
+{border: 1px solid white;
+margin-left: auto;
+margin-right: auto;}
+
+td, th
+{min-width: 50px;
+border: 1px solid white;}
+
