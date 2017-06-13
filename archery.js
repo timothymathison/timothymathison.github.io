@@ -13,7 +13,9 @@ var sendClick = function(event)
 
 }
 
-document.body.onclick = function(e)
-{
-    sendClick(e);
-};
+document.addEventListener("DOMContentLoaded", function(){
+    document.body.onclick = function(e)
+    {
+        sendClick(e);
+    }
+});
