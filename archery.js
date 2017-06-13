@@ -1,6 +1,6 @@
 
 
-var sendClick = function()
+var sendClick = function(event)
 {
     console.log(event);
     var httprequest = new XMLHttpRequest();
@@ -13,4 +13,7 @@ var sendClick = function()
 
 }
 
-document.body.onclick = sendClick();
+document.body.onclick = function(e)
+{
+    sendClick(e);
+};
