@@ -12,7 +12,7 @@ var sendClick = function(event)
             alert(httprequest.responseText);
     }
 
-    httprequest.send(null)
+    httprequest.send(null);
 
 }
 
