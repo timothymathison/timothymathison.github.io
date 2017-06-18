@@ -8,7 +8,7 @@ var sendClick = function(event)
 
     httprequest.onreadystatechange = function() {
         if (httprequest.readyState == 4 && httprequest.status == 200)
-            alert(httprequest.responseText);
+            console.log(httprequest.responseText);
     }
 
     httprequest.send();
