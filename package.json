@@ -2,12 +2,11 @@
   "name": "personal-website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "webpack": "^4.16.1",
-    "webpack-command": "^0.4.1"
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.16.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
