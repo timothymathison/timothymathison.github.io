@@ -1,6 +1,6 @@
 import u from './utility.js'
 
-document.onload = function() {
+window.onload = function() {
     console.log("Hello from onload function");
     u.util("I was imported");
 };
