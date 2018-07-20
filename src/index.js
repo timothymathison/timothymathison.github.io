@@ -5,6 +5,6 @@ document.onload = function() {
     u.util("I was imported");
 };
 
-document.addEventListener("DOMContentLoaded", function(){
-    console.log("Hello from load event listener");
-});
+// document.addEventListener("DOMContentLoaded", function(){
+//     console.log("Hello from load event listener");
+// });
