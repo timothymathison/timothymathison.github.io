@@ -1,3 +1,4 @@
+import './styles.css'
 import u from './utility.js'
 
 window.onload = function() {
