@@ -1,9 +1,19 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
-    }
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: 'dist/'
+    },
+    devServer: {
+        contentBase: './',
+        hot: true,
+    },
+    mode: "none",
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };
