@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "b33fc5721ccb9bb39478";
+/******/ 	var hotCurrentHash = "d23438e33de75f1ff232";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -782,7 +782,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/mnt/c/Development/timothymathison.github.io/dist";
+/******/ 	__webpack_require__.p = "dist/";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -799,24 +799,33 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _utility_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_utility_js__WEBPACK_IMPORTED_MODULE_0__);
 
 
 window.onload = function() {
-    console.log("Hello from onload function I'm here");
-    _utility_js__WEBPACK_IMPORTED_MODULE_0___default.a.util("I was imported");
-}(_utility_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+    console.log("Hello from onload function");
+    _utility_js__WEBPACK_IMPORTED_MODULE_0__["default"].util("I was imported");
+}(_utility_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-let util = (sayIt) => {
-    console.log(sayIt);
-};
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// let util = (sayIt) => {
+//     console.log("echo: " + sayIt);
+// };
+//
+// module.exports = {util: util};
 
-module.exports = {util: util};
+class Utility {
+    static util(sayIt) {
+        console.log("echo: " + sayIt);
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Utility);
 
 /***/ })
 /******/ ]);
