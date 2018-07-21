@@ -31,6 +31,12 @@ footer {
     height: 10em;
 }
 
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .body {
     padding: 4.5em 0 0 0;
     height: 100%;
@@ -51,8 +57,7 @@ footer {
     cursor: pointer;
 }
 
-a {
-    cursor: pointer;
+.drop-down a {
     font-size: 1.25em;
 }
 
@@ -85,6 +90,8 @@ a {
 }
 
 .flex-widgets {
+    margin: 0 auto;
+    max-width: 1000px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -95,4 +102,5 @@ a {
     height: 15em;
     margin: 10px;
     background-color: rgba(95, 124, 147, 0.9);
+    border-radius: 5px;
 }
