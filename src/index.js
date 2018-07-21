@@ -1,30 +1,42 @@
 import './styles.css'
 import u from './utility.js'
 
+//setup dynamic action events
 let setUpEvents = () => {
     let menu = document.getElementsByClassName("menu")[0];
-    if(!menu || menu === null) {
+    if(!menu || menu === null) { //if menu hasn't loaded yet, wait before setting up events
         setTimeout(setUpEvents, 1000);
-        console.log(menu);
     } else {
         let menuLinks = menu.children[menu.childElementCount - 1];
-        menuLinks.addEventListener("mouseover", openDropDown)
-        console.log(menuLinks);
+        let links = document.getElementById("links");
+        menuLinks.addEventListener("mouseover", openDropDown); //add hover action to link in menu
+        links.addEventListener("mouseover", openDropDown); //keep drop-down open
+        menuLinks.addEventListener("mouseout", closeDropDown);
+        links.addEventListener("mouseout", closeDropDown);
     }
 };
 
 let openDropDown = () => {
     let menu = document.getElementsByClassName("menu")[0];
     let menuLinks = menu.children[menu.childElementCount - 1];
-    let link = document.getElementById("links");
+    let links = document.getElementById("links");
 
-    if(menuLinks.className !== "dark") {
-        menuLinks.className = "dark"
+    menuLinks.className = "dark"; //change color while drop-down is open
+
+    if(links.classList.contains("hidden")) {
+        links.classList.remove("hidden")
     }
+};
 
-    // let isHidden = Array.from(link.classList).indexOf("hidden");
-    if(link.classList.contains("hidden")) {
-        link.classList.remove("hidden")
+let closeDropDown = () => {
+    let menu = document.getElementsByClassName("menu")[0];
+    let menuLinks = menu.children[menu.childElementCount - 1];
+    let links = document.getElementById("links");
+
+    menuLinks.className = "";
+
+    if(!links.classList.contains("hidden")) {
+        links.classList.add("hidden");
     }
 };
 

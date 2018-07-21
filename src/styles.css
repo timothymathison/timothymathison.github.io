@@ -53,6 +53,7 @@ footer {
 
 a {
     cursor: pointer;
+    font-size: 1.25em;
 }
 
 .menu li:hover, .drop-down a:hover {
@@ -73,6 +74,10 @@ a {
     right: 0;
     padding: 1em;
     text-align: left;
+}
+
+.drop-down div {
+    margin: 0.5em 0
 }
 
 .hidden {
