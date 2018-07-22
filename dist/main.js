@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c16dbfa9cba482e3ee88";
+/******/ 	var hotCurrentHash = "ae2123d79d1f607a066f";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -804,9 +804,50 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//setup dynamic action events
+let setUpEvents = () => {
+    let menu = document.getElementsByClassName("menu")[0];
+    if(!menu || menu === null) { //if menu hasn't loaded yet, wait before setting up events
+        setTimeout(setUpEvents, 1000);
+    } else {
+        let menuLinks = menu.children[menu.childElementCount - 1];
+        let links = document.getElementById("links");
+        menuLinks.addEventListener("mouseover", openDropDown); //add hover action to link in menu
+        links.addEventListener("mouseover", openDropDown); //keep drop-down open
+        menuLinks.addEventListener("mouseout", closeDropDown);
+        links.addEventListener("mouseout", closeDropDown);
+    }
+};
+
+let openDropDown = () => {
+    let menu = document.getElementsByClassName("menu")[0];
+    let menuLinks = menu.children[menu.childElementCount - 1];
+    let links = document.getElementById("links");
+
+    menuLinks.className = "dark"; //change color while drop-down is open
+
+    if(links.classList.contains("hidden")) {
+        links.classList.remove("hidden")
+    }
+};
+
+let closeDropDown = () => {
+    let menu = document.getElementsByClassName("menu")[0];
+    let menuLinks = menu.children[menu.childElementCount - 1];
+    let links = document.getElementById("links");
+
+    menuLinks.className = "";
+
+    if(!links.classList.contains("hidden")) {
+        links.classList.add("hidden");
+    }
+};
+
 window.onload = function() {
-    console.log("Hello from onload function");
-    _utility_js__WEBPACK_IMPORTED_MODULE_1__["default"].util("I was imported");
+    console.log("At onload function");
+    // u.util("I was imported");
+
+    setUpEvents();
 }(_utility_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 
