@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Polaris Trail Monitor UI",
+        "source": "https://github.com/timothymathison/trail-monitor-ui",
+        "description": "ReactJS",
+        "topics": ["Data Visualization", "ReactJS"]
+    },
+    {
+        "title": "Polaris Trail Monitor API",
+        "source": "https://github.com/timothymathison/TrailMonitor-AWS-Lambda",
+        "description": "AWS Lambda and Java",
+        "topics": ["AWS Lambda", "Data Service", "Data Processing"]
+    },
+    {
+        "title": "Jolteon",
+        "source": "https://github.com/timothymathison/Jolteon",
+        "description": "",
+        "topics": ["Automotive/Racing", "Controls", "Embedded"]
+    },
+    {
+        "title": "Browser API Exploitation (Malicious Website)",
+        "source": "https://github.com/timothymathison/malicious-web-site",
+        "description": "Proof of concept, showing the vulnerabilities of browser javascript APIs, specifically the web speech API.",
+        "topics": ["Security", "Browser APIs", "Attacks"]
+    },
+    {
+        "title": "Intelligent Rock-Paper-Scissors Game",
+        "source": "https://github.com/timothymathison/Intelligent-Rock-Paper-Scissors-Game",
+        "description": "Rock-Paper-Scissors game written in Python which tries to predict the user's next move and out guess them.",
+        "topics": ["Games", "Predictive Learning"]
+    }
+]

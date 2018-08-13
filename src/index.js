@@ -13,6 +13,8 @@ let setUpEvents = () => {
         links.addEventListener("mouseover", openDropDown); //keep drop-down open
         menuLinks.addEventListener("mouseout", closeDropDown);
         links.addEventListener("mouseout", closeDropDown);
+
+        loadProjects();
     }
 };
 
@@ -40,9 +42,23 @@ let closeDropDown = () => {
     }
 };
 
+let loadProjects = () => {
+    u.fetchProjects();
+
+};
+
+let createProject = (info) => {
+    let projContainer = document.getElementById("project-list");
+
+    let project = document.createElement("div");
+    project.className = "project-widget";
+
+
+    projContainer.appendChild(project);
+};
+
 window.onload = function() {
     console.log("At onload function");
-    // u.util("I was imported");
 
     setUpEvents();
 }(u);
