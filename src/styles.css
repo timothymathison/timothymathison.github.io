@@ -102,9 +102,13 @@ h3 {
 }
 
 [data-icon]:before {
-    font-family: IconFont; /* BYO icon font, mapped smartly */
-    content: attr(data-icon);
+    font-family: "Font Awesome 5 Free"; /* BYO icon font, mapped smartly */
+    font-style: normal;
+    font-weight: bold;
+    /*content: attr(data-icon);*/
+    content: "\f092";
     speak: none;
+
 }
 
 .flex-widgets {
