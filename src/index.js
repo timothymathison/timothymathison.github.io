@@ -43,7 +43,12 @@ let closeDropDown = () => {
 };
 
 let loadProjects = () => {
-    u.fetchProjects();
+    u.fetchProjects((projects) => {
+        console.log(projects);
+        for(let i = 0; i < projects.length; i++) {
+            createProject(projects[i]);
+        }
+    });
 
 };
 
@@ -52,7 +57,10 @@ let createProject = (info) => {
 
     let project = document.createElement("div");
     project.className = "project-widget";
-
+    project.innerHTML = `<h3>${info.title}</h3>
+                        <p>${info.description}</p>
+                        <a class="code-source icon-link" href="${info.source}"><span aria-hidden="true" data-icon="&#xf092;"></span></a>
+                        <div class="topics">Topics: ${info.topics.join(", ")}</div>`;
 
     projContainer.appendChild(project);
 };
