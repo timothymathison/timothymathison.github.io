@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "ae2123d79d1f607a066f";
+/******/ 	var hotCurrentHash = "f6921aee12955f6b0a39";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -816,6 +816,8 @@ let setUpEvents = () => {
         links.addEventListener("mouseover", openDropDown); //keep drop-down open
         menuLinks.addEventListener("mouseout", closeDropDown);
         links.addEventListener("mouseout", closeDropDown);
+
+        loadProjects();
     }
 };
 
@@ -843,9 +845,31 @@ let closeDropDown = () => {
     }
 };
 
+let loadProjects = () => {
+    _utility_js__WEBPACK_IMPORTED_MODULE_1__["default"].fetchProjects((projects) => {
+        console.log(projects);
+        for(let i = 0; i < projects.length; i++) {
+            createProject(projects[i]);
+        }
+    });
+
+};
+
+let createProject = (info) => {
+    let projContainer = document.getElementById("project-list");
+
+    let project = document.createElement("div");
+    project.className = "project-widget";
+    project.innerHTML = `<h3>${info.title}</h3>
+                        <p>${info.description}</p>
+                        <a class="code-source icon-link" href="${info.source}"><span aria-hidden="true" data-icon="&#xf092;"></span></a>
+                        <div class="topics">Topics: ${info.topics.join(", ")}</div>`;
+
+    projContainer.appendChild(project);
+};
+
 window.onload = function() {
     console.log("At onload function");
-    // u.util("I was imported");
 
     setUpEvents();
 }(_utility_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -873,6 +897,25 @@ __webpack_require__.r(__webpack_exports__);
 class Utility {
     static util(sayIt) {
         console.log("echo: " + sayIt);
+    }
+
+    static fetchProjects(handler) {
+        let req = new XMLHttpRequest();
+        let url = `${window.location.origin}/data/projects.json`;
+
+        req.onreadystatechange = () => {
+            if(req.readyState === 4) {
+                if(req.status === 200) {
+                    let projects = JSON.parse(req.responseText);
+                    handler(projects);
+                } else {
+                    console.error("Error retrieving project data");
+                }
+            }
+        };
+
+        req.open("GET", url, true);
+        req.send();
     }
 }
 
