@@ -66,7 +66,5 @@ let createProject = (info) => {
 };
 
 window.onload = function() {
-    console.log("At onload function");
-
     setUpEvents();
 }(u);
