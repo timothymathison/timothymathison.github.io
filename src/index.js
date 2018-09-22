@@ -59,8 +59,8 @@ let createProject = (info) => {
     project.className = "project-widget";
     project.innerHTML = `<h3>${info.title}</h3>
                         <p>${info.description}</p>
-                        <a class="code-source icon-link" href="${info.source}"><span aria-hidden="true" data-icon="&#xf092;"></span></a>
-                        <div class="topics">Topics: ${info.topics.join(", ")}</div>`;
+                        <div class="topics">Topics: ${info.topics.join(", ")}</div>
+                        <a class="code-link" href="${info.source}"><svg class="icon"><use xlink:href="#code-icon"></use></svg></a>`;
 
     projContainer.appendChild(project);
 };
