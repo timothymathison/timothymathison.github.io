@@ -116,7 +116,7 @@ h3 {
 
 .flex-widgets {
     margin: 0 auto;
-    max-width: 64em;
+    max-width: 96em;
     display: flex;
     flex-flow: row wrap;
     justify-content: left;
@@ -124,7 +124,7 @@ h3 {
 
 .project-widget {
     position: relative;
-    width: 20em;
+    width: 30em;
     height: 12em;
     margin: 0.5em;
     border-radius: 5px;
@@ -163,7 +163,7 @@ h3 {
     margin-top: auto;
     text-align: left;
     font-size: 0.75em;
-    width: 25em;
+    width: 90%;
     padding: 0.25em;
     position: absolute;
     bottom: 0;
