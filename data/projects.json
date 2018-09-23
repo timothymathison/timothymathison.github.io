@@ -2,31 +2,31 @@
     {
         "title": "Polaris Trail Monitor UI",
         "source": "https://github.com/timothymathison/trail-monitor-ui",
-        "description": "ReactJS",
+        "description": "A data visualization web app, built with ReactJS, which pulls trail data from the API. The app plots a color coded map to show trail roughness and traffic levels.",
         "topics": ["Data-Visualization", "ReactJS"]
     },
     {
         "title": "Polaris Trail Monitor API",
         "source": "https://github.com/timothymathison/TrailMonitor-AWS-Lambda",
-        "description": "AWS Lambda and Java",
-        "topics": ["AWS-Lambda", "Data-Service", "Data-Processing"]
+        "description": "API built with Java running on AWS Lambda, which process and stores raw data sent from the vehicle mountable device my senior design team built. The API exposes processed visualization data which indicates trail conditions.",
+        "topics": ["AWS-Lambda", "Data-Service", "Data-Processing", "Java"]
     },
     {
         "title": "Jolteon",
         "source": "https://github.com/timothymathison/Jolteon",
-        "description": "",
-        "topics": ["Automotive/Racing", "Controls", "Embedded"]
+        "description": "Electrical power control software which run on the University of Minnesota Formual Car's Power Distribution Module. The embedded software monitors current draw levels and driver inputs, and distributes power to the car's systems accordingly.",
+        "topics": ["Automotive/Racing", "Controls", "Embedded", "C"]
     },
     {
         "title": "Browser API Exploitation (Malicious Website)",
         "source": "https://github.com/timothymathison/malicious-web-site",
         "description": "Proof of concept, showing the vulnerabilities of browser javascript APIs, specifically the web speech API.",
-        "topics": ["Security", "Browser-APIs", "Attacks"]
+        "topics": ["Security", "Browser-APIs", "Attacks", "Javascript"]
     },
     {
         "title": "Intelligent Rock-Paper-Scissors Game",
         "source": "https://github.com/timothymathison/Intelligent-Rock-Paper-Scissors-Game",
         "description": "Rock-Paper-Scissors game written in Python which tries to predict the user's next move and out guess them.",
-        "topics": ["Games", "Predictive-Learning"]
+        "topics": ["Games", "Predictive-Learning", "Python"]
     }
 ]
