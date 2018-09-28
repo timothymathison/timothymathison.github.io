@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "f6921aee12955f6b0a39";
+/******/ 	var hotCurrentHash = "31d107a854febae3291b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -862,15 +862,13 @@ let createProject = (info) => {
     project.className = "project-widget";
     project.innerHTML = `<h3>${info.title}</h3>
                         <p>${info.description}</p>
-                        <a class="code-source icon-link" href="${info.source}"><span aria-hidden="true" data-icon="&#xf092;"></span></a>
-                        <div class="topics">Topics: ${info.topics.join(", ")}</div>`;
+                        <div class="topics">Topics: ${info.topics.join(", ")}</div>
+                        <a class="code-link" href="${info.source}"><svg class="icon"><use xlink:href="#code-icon"></use></svg></a>`;
 
     projContainer.appendChild(project);
 };
 
 window.onload = function() {
-    console.log("At onload function");
-
     setUpEvents();
 }(_utility_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
@@ -888,16 +886,8 @@ window.onload = function() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// let util = (sayIt) => {
-//     console.log("echo: " + sayIt);
-// };
-//
-// module.exports = {util: util};
 
 class Utility {
-    static util(sayIt) {
-        console.log("echo: " + sayIt);
-    }
 
     static fetchProjects(handler) {
         let req = new XMLHttpRequest();
