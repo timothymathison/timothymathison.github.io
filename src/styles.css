@@ -25,6 +25,13 @@ header h1 {
     margin-top: 0.5em;
 }
 
+iframe {
+    position: relative;
+    height: 99%;
+    width: 100%;
+    border: none;
+}
+
 footer {
     margin: -10em 0 0 0;
     width: 100%;
@@ -48,6 +55,11 @@ h3 {
     box-sizing: border-box;
     min-height: 100%;
     z-index: 9;
+}
+
+.full-height {
+    height: 100%;
+    padding: 4.5em 0 0 0;
 }
 
 .menu {
@@ -119,12 +131,13 @@ h3 {
     max-width: 96em;
     display: flex;
     flex-flow: row wrap;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 .project-widget {
     position: relative;
     width: 30em;
+    flex-grow: 1;
     height: 12em;
     margin: 0.5em;
     border-radius: 5px;
